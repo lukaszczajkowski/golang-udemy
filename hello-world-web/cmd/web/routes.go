@@ -18,6 +18,9 @@ func routes(app *config.AppConfig) http.Handler {
 
 	// middleware to avoid panic and allow graceful error recovery
 	mux.Use(middleware.Recoverer)
+	// just an example of using a custom middleware
+	//mux.Use(WriteToConsole)
+	mux.Use(NoSurf)
 
 	mux.Get("/", handlers.Repo.Home)
 	mux.Get("/about", handlers.Repo.About)
