@@ -29,7 +29,7 @@ func main() {
 
 	render.NewTemplates(&app)
 
-	// that is needed when we're not using routing middleware
+	// that is needed when we're not using external routing packages
 	//http.HandleFunc("/", handlers.Repo.Home)
 	//http.HandleFunc("/about", handlers.Repo.About)
 
